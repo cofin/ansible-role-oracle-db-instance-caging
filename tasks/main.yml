@@ -1,0 +1,10 @@
+---
+# tasks file for oracle-db-instance-caging
+- name: "Setting resource_manager_plan and allocated cores for defined databases"
+  include_tasks: db-cage.yml
+  loop: "{{ oracle_databases }}"
+  loop_control:
+    loop_var: oracle_db
+  when:
+    - "oracle_databases is defined"
+    - "oracle_databases|length > 0"

@@ -1,0 +1,4 @@
+---
+# defaults file for oracle-db-instance-caging
+oracle_databases:
+  - { db_name: "dbatools", display_name: "DBA_Tools/Database",  host: "examid-scan.us.pioneernrc.pvt", port: 1521, service_name: "dbatools", allocated_cores: "2", resource_manager_plan: "default_plan" }
